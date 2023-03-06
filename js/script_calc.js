@@ -1,4 +1,5 @@
 const numberButtons = document.querySelectorAll("[data-number]");
+console.log(numberButtons);
 const operationButtons = document.querySelectorAll("[data-operator]");
 const equalsButton = document.querySelector("[data-equals]");
 const deleteButton = document.querySelector("[data-delete]");
@@ -16,15 +17,15 @@ class Calculator {
     this.currentOperandTextElement = currentOperandTextElement;
     this.clear();
   }
-
+  
   formatDisplayNumber(number) {
     const stringNumber = number.toString();
-
+    
     const integerDigits = parseFloat(stringNumber.split(".")[0]);
     const decimalDigits = stringNumber.split(".")[1];
-
+    
     let integerDisplay;
-
+    
     if (isNaN(integerDigits)) {
       integerDisplay = "";
     } else {
@@ -46,31 +47,32 @@ class Calculator {
 
   calculate() {
     let result;
-
+    
     const _previousOperand = parseFloat(this.previousOperand);
     const _currentOperand = parseFloat(this.currentOperand);
-
+    
     if (isNaN(_previousOperand) || isNaN(_currentOperand)) return;
-
+    
     switch (this.operation) {
       case "+":
         result = _previousOperand + _currentOperand;
         break;
-      case "-":
-        result = _previousOperand - _currentOperand;
-        break;
-      case "÷":
-        result = _previousOperand / _currentOperand;
-        break;
-      case "*":
-        result = _previousOperand * _currentOperand;
-        break;
-      default:
-        return;
-    }
-
-    this.currentOperand = result;
-    this.operation = undefined;
+        case "-":
+          result = _previousOperand - _currentOperand;
+          break;
+          case "÷":
+            result = _previousOperand / _currentOperand;
+            break;
+            case "*":
+              result = _previousOperand * _currentOperand;
+              break;
+              default:
+                return;
+              }
+              
+     
+              this.currentOperand = result;
+              this.operation = undefined;
     this.previousOperand = "";
   }
 
