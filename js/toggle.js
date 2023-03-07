@@ -1,24 +1,17 @@
 const botaoToggle = document.getElementById("ckb");
 const body = document.querySelector('body');
+const localStorageKey = "modo-escuro";
 
+// Verifica se há um valor armazenado no localStorage para o modo escuro
+if (localStorage.getItem(localStorageKey) === "true") {
+  body.classList.add("dark");
+  botaoToggle.checked = true;
+}
 
 botaoToggle.addEventListener('click', () =>{
     body.classList.toggle('dark');
     botaoToggle.classList.toggle('light');
 
+    // Armazena o estado atual do botão no localStorage
+    localStorage.setItem(localStorageKey, botaoToggle.checked);
 })
-
-// function changeTheme(isDark) {
-//     if(isDark){
-//         document.body.style.setProperty('--background-color', '#323232');
-//         document.body.style.setProperty('--font-color', '#e1e1e1');
-//         localStorage.setItem('data-theme', 'dark');
-
-//     }else{
-//         document.body.style.setProperty('--background-color', '#e1e1e1');
-//         document.body.style.setProperty('--font-color', '#323232');
-//         localStorage.setItem('data-theme', 'light');
-
-//     }
-
-// }

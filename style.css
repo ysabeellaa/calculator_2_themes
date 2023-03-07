@@ -45,7 +45,7 @@
 .footer-content i{
   font-size: 2em;
   align-items: center;
-  color: var(--preto);
+  color: var(--cinza_bkg);
   padding: 0px 2px 0px 4px; 
 }
 
@@ -71,8 +71,8 @@
 
 .botoes > button{
   cursor: pointer;
-  border: 1px solid var(--preto);
-  background-color: var(--preto);
+  border: 1px solid var(--cinza_bkg);
+  background-color: var(--cinza_bkg);
   color: var(--branco);
   font-weight: bold;
   font-size: 1.2rem;
@@ -86,7 +86,7 @@
 
 .output{
   grid-column: 1/-1;
-  background: var(--preto);
+  background: var(--cinza_bkg);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -104,7 +104,7 @@
 }
 
 .output{
-  border: 1px solid var(--preto);
+  border: 1px solid var(--cinza_bkg);
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
@@ -191,6 +191,6 @@ i.material-symbols-outlined{
   background-color: var(--cinza_bkg);
 }
 
-.dark .botoes > button, .dark .output{
+.dark .botoes button, .dark .output{
   border: 1px solid var(--branco);
 }
