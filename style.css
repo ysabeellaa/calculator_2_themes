@@ -65,8 +65,8 @@
   justify-content: center;
   align-content: center;
   /* min-height: 80vh; */
-  grid-template-columns: repeat(4,100px);
-  grid-template-rows:minmax(120px, auto) repeat(5,80px);
+  grid-template-columns: repeat(4,90px);
+  grid-template-rows:minmax(100px, auto) repeat(5,70px);
 }
 
 .botoes > button{
@@ -129,7 +129,7 @@
 
 
 .label{
-  margin-top: 20px;
+  /* margin-top: 20px; */
   background-color: var(--cinza_bkg);
   border-radius: 50px;
   display: flex;
@@ -163,9 +163,10 @@ i.material-symbols-outlined{
 
 .main-container{
   display: flex;
+  margin: 20px 0;
   flex-direction: column;
-  min-height: 100vh;
-  justify-content: space-between;
+  min-height: 90vh;
+  justify-content: space-between; 
   align-items: center;
   /* margin: 20px 0; */
 }
