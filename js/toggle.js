@@ -4,6 +4,7 @@ const body = document.querySelector('body');
 
 botaoToggle.addEventListener('click', () =>{
     body.classList.toggle('dark');
+    botaoToggle.classList.toggle('light');
 
 })
 

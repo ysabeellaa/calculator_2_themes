@@ -1,5 +1,5 @@
 :root{
-  --branco: white;
+  --branco: #e1e1e1;
   --vermelho: #800000;
   --cinza_bkg: #323232; 
   --preto: black;
@@ -73,7 +73,9 @@
   cursor: pointer;
   border: 1px solid var(--preto);
   background-color: var(--preto);
-  color: var(--branco)
+  color: var(--branco);
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 .botoes .operator{
   background: var(--vermelho);
@@ -128,7 +130,7 @@
 
 .label{
   margin-top: 20px;
-  background-color: var(--preto);
+  background-color: var(--cinza_bkg);
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -158,11 +160,6 @@ i.material-symbols-outlined{
   font-size: 17px;
 }
 
-.dark{
-  background-color: var(--cinza_bkg);
-}
-
-
 
 .main-container{
   display: flex;
@@ -171,4 +168,29 @@ i.material-symbols-outlined{
   justify-content: space-between;
   align-items: center;
   /* margin: 20px 0; */
+}
+
+.dark{
+  background-color: var(--cinza_bkg);
+}
+
+
+.dark label, .dark .output, .dark button {
+  background-color: var(--branco);
+}
+
+.dark .fa, .dark p, .dark .operator{
+  color: var(--branco);
+}
+
+.dark .sun, .dark button, .dark .current-operand, .dark .previous-operand{
+  color: var(--cinza_bkg);
+}
+
+.dark .ball {
+  background-color: var(--cinza_bkg);
+}
+
+.dark .botoes > button, .dark .output{
+  border: 1px solid var(--branco);
 }
